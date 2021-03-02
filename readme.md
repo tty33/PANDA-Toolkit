@@ -36,4 +36,5 @@ GigaVision Challenge (<a href="https://www.biendata.com/competition/gigavision/"
 3. Evaluating the result, you can refer to the "DetEval.py" and "MOTEval.py" 
 4. Split the large image, you can refer to the "ImgSplit.py"
 5. Merging the results detected on the patches, you can refer to the "ResultMerge.py"
+6. Preparing the training data for mmdetection, you can refer to the "Task1_utils.py"
 
