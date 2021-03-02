@@ -1,12 +1,12 @@
 # Installation
 1. Environment: **Python 3**
-2. Get PANDA from [download page](http://www.panda-dataset.com/Download.html).
+2. Get PANDA from [download page](http://www.panda-dataset.com/Download.html)
 3. Install dependencies
 ```
     pip install -r requirements.txt
 ```
 
-4. We use MMDetection to train baseline model, please refer to [this page](https://github.com/open-mmlab/mmdetection) for installation and usage.
+4. We use MMDetection to train baseline model, please refer to [this page](https://github.com/open-mmlab/mmdetection) for installation and usage
 
 
 
@@ -99,7 +99,7 @@ load_from = 'checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth'
 
 We train only one category of box during one training process.
 
-- Change the **CATE_ID** in the above config to select target category for training.
+- Change the **CATE_ID** in the above config to select target category for training
 - Change the **data_root** and the **anno_root** to your training data path
 
 The **second config** need to be overwritten is the file `configs/_base_/models/faster_rcnn_r50_fpn.py`, the config is as below.
