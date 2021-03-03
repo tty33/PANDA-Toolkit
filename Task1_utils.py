@@ -46,10 +46,9 @@ def main():
     vehicle_anno_file = 'vehicle_bbox_train.json'
     
     # We provide the scale param before split the images and labels.
-    splitmode = 'train'
-    split = ImgSplit(IMAGE_ROOT, person_anno_file, 'person', OUT_PERSON_PATH, person_anno_file, splitmode)
+    split = ImgSplit(IMAGE_ROOT, person_anno_file, 'person', OUT_PERSON_PATH, person_anno_file)
     split.splitdata(1)
-    split = ImgSplit(IMAGE_ROOT, vehicle_anno_file, 'vehicle', OUT_VEHICLE_PATH, vehicle_anno_file, splitmode)
+    split = ImgSplit(IMAGE_ROOT, vehicle_anno_file, 'vehicle', OUT_VEHICLE_PATH, vehicle_anno_file)
     split.splitdata(1)
 
     '''2. transfer annotations to COCO format'''
