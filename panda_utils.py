@@ -322,7 +322,7 @@ def generate_coco_anno(personsrcfile, vehiclesrcfile, tgtfile, keywords=None):
 
         for objdict in vehicle_anno_dict[imagename]['objects list']:
             cate = objdict['category']
-            if cate == 'vehicles':
+            if cate in ['vehicles', 'fake', 'ignore']:
                 annotation = dict()
                 rect = objdict['rect']
                 annotation["image_id"] = imgid
@@ -539,7 +539,7 @@ def generate_coco_anno_vehicle(vehiclesrcfile, tgtfile, keywords=None):
 
         for objdict in imagedict['objects list']:
             cate = objdict['category']
-            if cate == 'vehicles':
+            if cate in ['vehicles', 'fake', 'ignore']:
                 annotation = dict()
                 rect = objdict['rect']
                 annotation["image_id"] = imgid
