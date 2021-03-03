@@ -94,7 +94,7 @@ data = dict(
 evaluation = dict(interval=1, metric='bbox')
 
 # We can use the pre-trained Faster RCNN model to obtain higher performance
-load_from = 'checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth'
+# load_from = 'checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth'
 ```
 
 We train only one category of box during one training process.
