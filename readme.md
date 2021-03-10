@@ -12,7 +12,7 @@
 
 # Train on PANDA-IMAGE with MMDetection
 
-In this note, you will know how to finetune faster rcnn model with PANDA-IMAGE dataset. 
+In this note, you will know how to finetune Faster RCNN model with PANDA-IMAGE dataset. 
 
 The basic steps are as below:
 
@@ -26,7 +26,7 @@ We need to reorganize the dataset into COCO format. Please refer to `Task1_utils
 
 ## Prepare config files of MMDetection
 
-The second step is to prepare config files thus the dataset could be successfully loaded. Assume that we want to use Faster R-CNN, the config to train the detector on PANDA IMAGE dataset is as below. 
+The second step is to prepare config files thus the dataset could be successfully loaded. Assume that we want to use Faster RCNN, the config to train the detector on PANDA IMAGE dataset is as below. 
 
 The **first config** need to be overwritten is the file `configs/_base_/datasets/coco_detection.py`, the config is as below.
 
@@ -238,7 +238,7 @@ For more detailed usages, please refer to the [Case 1](https://github.com/open-m
 
 ## Test and inference
 1. Copy `Task1_test.py` to MMdetection root folder.
-2. Finetune the faster rcnn model and save the checkpoints according to the tutorial above, or download the pretrained weights from [here](https://pan.baidu.com/s/143REv-mb_H-CXWDwU3y33w) (code: c6uc) and update the PATH setting in `Task1_test.py`
+2. Finetune the Faster RCNN model and save the checkpoints according to the tutorial above, or download the pretrained weights from [here](https://pan.baidu.com/s/143REv-mb_H-CXWDwU3y33w) (code: c6uc) and update the PATH setting in `Task1_test.py`
 3. To test the model, navigate to MMdetection root folder, and then you can simply run the following code to generate a result file to submit.
 ```shell
 python Task1_test.py
