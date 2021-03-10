@@ -7,9 +7,9 @@
 ```
 4. We use MMDetection to train baseline model, please refer to [this page](https://github.com/open-mmlab/mmdetection) for MMDetection installation and usage.
 
-**Note**
+**NOTE**
 
- You can either finetune the Faster RCNN model and save the checkpoints according to the following [training tutorial](#train-on-panda-image-with-MMDetection), or download the pretrained weights from [here](https://pan.baidu.com/s/143REv-mb_H-CXWDwU3y33w) (code: c6uc) and inference without training. For details, please refer to [Test and inference](#test-and-inference).
+ You can either finetune the Faster RCNN model and save the checkpoints according to the following [training tutorial](#train-on-panda-image-with-MMDetection), or download the pretrained weights from [here](https://pan.baidu.com/s/143REv-mb_H-CXWDwU3y33w) (code: c6uc) and inference on the PANDA-IMAGE test set without training. For details, please refer to [Test and inference](#test-and-inference).
 
 
 
