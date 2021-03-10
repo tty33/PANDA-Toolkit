@@ -23,6 +23,7 @@ The dataset file tree should be organized as follows:
 |--IMAGE_ROOT
     |--image_train
     |--image_annos
+    |--image_test
 '''
 
 CATE = {'1': 'person_visible', '2': 'person_full', '3': 'person_head', '4': 'vehicle'}

@@ -212,7 +212,7 @@ model = dict(
         rcnn=dict(
             score_thr=0.05,
             nms=dict(type='nms', iou_threshold=0.5),
-            max_per_img=100)
+            max_per_img=500)
         # soft-nms is also supported for rcnn testing
         # e.g., nms=dict(type='soft_nms', iou_threshold=0.5, min_score=0.05)
     ))
@@ -236,20 +236,29 @@ python tools/train.py python tools/train.py configs/faster_rcnn/faster_rcnn_r50_
 For more detailed usages, please refer to the [Case 1](https://github.com/open-mmlab/mmdetection/blob/master/docs/1_exist_data_model.md).
 
 
+## Test and inference
+1. Copy `Task1_test.py` to MMdetection root folder.
+2. Finetune the faster rcnn model and save the checkpoints according to the tutorial above, or download the pretrained weights from [here](https://pan.baidu.com/s/143REv-mb_H-CXWDwU3y33w) (code: c6uc) and update the PATH setting in `Task1_test.py`
+3. To test the model, navigate to MMdetection root folder, and then you can simply run the following code to generate a result file to submit.
+```shell
+python Task1_test.py
+```
+
+
 # Baseline results
 
 | Matrices                | Details                                           | Score |
 | ----------------------- | ------------------------------------------------- | ----- |
-| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area =  all \| maxDets=500 ]  | 0.279 |
-| Average Precision  (AP) | @[ IoU=0.50    \| area =  all \| maxDets=500 ]    | 0.492 |
-| Average Precision  (AP) | @[ IoU=0.75    \| area =  all \| maxDets=500 ]    | 0.281 |
-| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area = small \| maxDets=500 ] | 0.310 |
-| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area =medium \| maxDets=500 ] | 0.318 |
-| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area = large \| maxDets=500 ] | 0.110 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets= 10 ]  | 0.045 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets=100 ]  | 0.223 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets=500 ]  | 0.350 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area = small \| maxDets=500 ] | 0.394 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =medium \| maxDets=500 ] | 0.374 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area = large \| maxDets=500 ] | 0.146 |
+| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area =  all \| maxDets=500 ]  | 0.312 |
+| Average Precision  (AP) | @[ IoU=0.50    \| area =  all \| maxDets=500 ]    | 0.482 |
+| Average Precision  (AP) | @[ IoU=0.75    \| area =  all \| maxDets=500 ]    | 0.352 |
+| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area = small \| maxDets=500 ] | 0.203 |
+| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area =medium \| maxDets=500 ] | 0.376 |
+| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area = large \| maxDets=500 ] | 0.352 |
+| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets= 10 ]  | 0.061 |
+| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets=100 ]  | 0.266 |
+| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets=500 ]  | 0.347 |
+| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area = small \| maxDets=500 ] | 0.229 |
+| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =medium \| maxDets=500 ] | 0.413 |
+| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area = large \| maxDets=500 ] | 0.379 |
 
