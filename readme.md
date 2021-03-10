@@ -5,8 +5,11 @@
 ```
     pip install -r requirements.txt
 ```
+4. We use MMDetection to train baseline model, please refer to [this page](https://github.com/open-mmlab/mmdetection) for MMDetection installation and usage.
 
-4. We use MMDetection to train baseline model, please refer to [this page](https://github.com/open-mmlab/mmdetection) for installation and usage
+**Note**
+
+ You can either finetune the Faster RCNN model and save the checkpoints according to the following [training tutorial](#train-on-panda-image-with-MMDetection), or download the pretrained weights from [here](https://pan.baidu.com/s/143REv-mb_H-CXWDwU3y33w) (code: c6uc) and inference without training. For details, please refer to [Test and inference](#test-and-inference).
 
 
 
@@ -16,10 +19,10 @@ In this note, you will know how to finetune Faster RCNN model with PANDA-IMAGE d
 
 The basic steps are as below:
 
-1. Prepare the customized dataset
-2. Prepare config files
-3. Download COCO pre-trained model
-4. Train on the PANDA IMAGE dataset
+1. [Prepare the PANDA-IMAGE dataset](#prepare-the-panda-image-dataset)
+2. [Prepare config files of MMDetection](#prepare-config-files-of-MMDetection)
+3. [Download COCO pre-trained model](#download-coco-pre-trained-model)
+4. [Train on the PANDA IMAGE dataset](#train-on-the-panda-image-dataset)
 
 ## Prepare the PANDA-IMAGE dataset
 We need to reorganize the dataset into COCO format. Please refer to `Task1_utils.py`.
@@ -225,7 +228,7 @@ The **third config** need to be modified is the file `configs/_base_/default_run
 
 Download  COCO pre-trained model from [here](http://download.openmmlab.com/mmdetection/v2.0/faster_rcnn/faster_rcnn_r50_fpn_1x_coco/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth) and put it to `checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth`.
 
-## Train a new model
+## Train on the PANDA IMAGE dataset
 
 To train a model with the new config, you can simply run
 
