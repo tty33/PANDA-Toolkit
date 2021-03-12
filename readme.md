@@ -1,6 +1,6 @@
 # Installation
 1. Environment: **Python 3**
-2. Get PANDA from [download page](http://www.panda-dataset.com/Download.html)
+2. Get PANDA from [download page](https://tianchi.aliyun.com/competition/entrance/531855/information)
 3. Install dependencies
 ```
     pip install -r requirements.txt
