@@ -36,8 +36,8 @@ IMAGE_ROOT = 'YOUR/PATH/PANDA_IMAGE/'
 FASTER_RCNN_CONFIG = 'configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py' # model configs
 CKPT_PATH = 'YOUR/PATH/pts' # model checkpoints
 RESULT_PATH = 'YOUR/PATH/' # save the detection results
-HEIGHT = 250 # Sliding Window Height
-WIDTH = 500 # Sliding Window Width
+HEIGHT = 500 # Sliding Window Height
+WIDTH = 1000 # Sliding Window Width
 SCORE_THRES = 0.85 
 
 
