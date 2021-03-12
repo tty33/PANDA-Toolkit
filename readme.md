@@ -246,7 +246,9 @@ For more detailed usages, please refer to the [Case 1](https://github.com/open-m
 ```shell
 python Task1_test.py
 ```
+**NOTE**
 
+Try to use various combinations of WIDTH and HEIGHT, for example:(1000,500),(2000,1000)... We get the following baseline results with window size of (1000,500) for category 1、2、4, and window size of (500,250) for category 3.
 
 # Baseline results
 

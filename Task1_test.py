@@ -36,9 +36,11 @@ IMAGE_ROOT = 'YOUR/PATH/PANDA_IMAGE/'
 FASTER_RCNN_CONFIG = 'configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py' # model configs
 CKPT_PATH = 'YOUR/PATH/pts' # model checkpoints
 RESULT_PATH = 'YOUR/PATH/' # save the detection results
+SCORE_THRES = 0.85 
+
+# TODO try to use various combinations of WIDTH and HEIGHT, for example:(1000,500),(2000,1000)...
 HEIGHT = 500 # Sliding Window Height
 WIDTH = 1000 # Sliding Window Width
-SCORE_THRES = 0.85 
 
 
 if not pt.exists(RESULT_PATH):
