@@ -233,7 +233,7 @@ Download  COCO pre-trained model from [here](http://download.openmmlab.com/mmdet
 To train a model with the new config, you can simply run
 
 ```shell
-python tools/train.py python tools/train.py configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py [optional arguments]
+python tools/train.py configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py [optional arguments]
 ```
 
 For more detailed usages, please refer to the [Case 1](https://github.com/open-mmlab/mmdetection/blob/master/docs/1_exist_data_model.md).
